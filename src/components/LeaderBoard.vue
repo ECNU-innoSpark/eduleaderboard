@@ -174,6 +174,9 @@ function guessScoreColumns(rows, headerMeta) {
     const name = header[c];
     if (!name || excluded.has(name)) continue;
     if (hasAvgHeader && name.includes("平均值")) continue;
+    // 删去英文维度：只保留包含中文的维度列
+    const hasCJK = /[\u4e00-\u9fa5]/.test(name);
+    if (!hasCJK) continue;
 
     let numericCount = 0;
     let nonEmptyCount = 0;
