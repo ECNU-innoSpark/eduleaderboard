@@ -1,0 +1,264 @@
+.leaderboard {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), rgba(15, 23, 42, 0.95));
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.leaderboard-header {
+  margin-bottom: 20px;
+}
+
+.leaderboard-header h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.dimension-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dimension-tabs {
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px;
+  scroll-behavior: smooth;
+}
+
+.dimension-tabs::-webkit-scrollbar {
+  height: 0;
+}
+
+.tab-arrow {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  color: #9ca3af;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.tab-arrow:hover {
+  background: rgba(30, 64, 175, 0.9);
+  color: #e5e7eb;
+  border-color: rgba(191, 219, 254, 0.9);
+}
+
+.tab-arrow.left {
+  margin-right: 2px;
+}
+
+.tab-arrow.right {
+  margin-left: 2px;
+}
+
+.tab-label {
+  white-space: nowrap;
+}
+
+.tab-label-en {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.tab {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background: rgba(51, 65, 85, 0.8);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  border-color: transparent;
+  color: #f9fafb;
+  font-weight: 500;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ranking-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.ranking-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.model-row {
+  transition: background 0.2s;
+}
+
+.model-row:hover {
+  background: rgba(51, 65, 85, 0.3);
+}
+
+.model-row.highlight {
+  background: rgba(79, 70, 229, 0.1);
+}
+
+.rank-col {
+  width: 60px;
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  background: rgba(51, 65, 85, 0.6);
+  color: #cbd5e1;
+}
+
+.rank-badge.rank-1 {
+  background: radial-gradient(circle at 30% 30%, #fef9c3, #f59e0b);
+  color: #1e293b;
+}
+
+.rank-badge.rank-2 {
+  background: radial-gradient(circle at 30% 30%, #e5e7eb, #6b7280);
+  color: #1e293b;
+}
+
+.rank-badge.rank-3 {
+  background: radial-gradient(circle at 30% 30%, #ffedd5, #f97316);
+  color: #1e293b;
+}
+
+.model-col {
+  min-width: 200px;
+}
+
+.model-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.model-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.score-col {
+  min-width: 150px;
+}
+
+.score-display {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.score-value {
+  font-weight: 600;
+  font-size: 16px;
+  color: #22c55e;
+}
+
+.score-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(51, 65, 85, 0.6);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #10b981);
+  transition: width 0.3s ease;
+}
+
+.trend-col {
+  width: 80px;
+}
+
+.trend {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.trend.up {
+  color: #22c55e;
+}
+
+.trend.down {
+  color: #ef4444;
+}
+
+.trend.same {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .leaderboard {
+    padding: 16px;
+  }
+
+  .dimension-tabs {
+    gap: 6px;
+  }
+
+  .tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .ranking-table th,
+  .ranking-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
+
